@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>@front.dev2 — Links</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+  body{background:#000;color:#fff;min-height:100vh;display:flex;justify-content:center;padding:30px 16px}
+  .box{width:100%;max-width:420px;text-align:center}
+  .avatar{width:110px;height:110px;border:2px solid #fff;border-radius:50%;margin:10px auto 18px;display:flex;align-items:center;justify-content:center;font-size:38px;font-weight:900;background:#111}
+  h1{font-size:28px;letter-spacing:-0.5px}
+  .user{color:#888;font-size:14px;margin:6px 0 8px}
+  .bio{color:#aaa;font-size:14px;line-height:1.6;max-width:340px;margin:0 auto 10px}
+  .bio b{color:#fff}
+  .views{font-size:12px;color:#555;margin-bottom:24px;letter-spacing:1px}
+  .link{display:block;background:#111;border:1px solid #222;color:#fff;text-decoration:none;padding:16px 20px;margin-bottom:12px;font-weight:700;font-size:15px;transition:0.2s;position:relative}
+  .link:hover{background:#fff;color:#000;border-color:#fff;transform:translateY(-2px)}
+  .link small{display:block;font-weight:400;font-size:12px;opacity:.6;margin-top:3px}
+  .icon{position:absolute;left:18px;top:50%;transform:translateY(-50%);font-size:18px}
+  .footer{margin-top:30px;color:#444;font-size:12px;line-height:1.6}
+</style>
+</head>
+<body>
+<div class="box">
+  <div class="avatar">&lt;/&gt;</div>
+  <h1>&lt;front.dev /&gt;</h1>
+  <p class="user">@front.dev2</p>
+  <p class="bio"><b>Estudante de ADS | Rumo a Dev Front-end</b><br>Construindo meu futuro uma linha de código por vez.</p>
+  <p class="views" id="views">● 0 VISUALIZAÇÕES</p>
+
+  <a class="link" href="https://www.tiktok.com/@front.dev2" target="_blank">
+    <span class="icon">▶</span> TIKTOK
+    <small>@front.dev2 — me segue lá</small>
+  </a>
+
+  <a class="link" href="https://github.com/frontdev2" target="_blank">
+    <span class="icon">&lt;/&gt;</span> GITHUB
+    <small>meus códigos e projetos</small>
+  </a>
+
+  <a class="link" href="mailto:frontendzero2@gmail.com">
+    <span class="icon">✉</span> EMAIL
+    <small>frontendzero2@gmail.com</small>
+  </a>
+
+  <a class="link" href="#projetos" style="background:#fff;color:#000">
+    <span class="icon">⬢</span> MEUS PROJETOS
+    <small>em breve — construindo em silêncio</small>
+  </a>
+
+  <p class="footer">&lt;front.dev /&gt; © 2026<br>Feito em preto. Feito com código.</p>
+</div>
+
+<script>
+  let v = localStorage.getItem('views_frontdev') || 0;
+  v = parseInt(v) + 1;
+  localStorage.setItem('views_frontdev', v);
+  document.getElementById('views').innerText = '● ' + v + ' VISUALIZAÇÕES';
+</script>
+</body>
+</html>
